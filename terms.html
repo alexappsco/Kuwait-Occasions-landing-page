@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" class="light">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>مناسبات الكويت - الشروط والأحكام</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "surface": "#f8fafc",
+              "surface-bright": "#ffffff",
+              "secondary": "#F4B942",
+              "background": "#f8fafc",
+              "outline": "#64748b",
+              "surface-variant": "#e2e8f0",
+              "primary": "#1445a0",
+              "primary-dark": "#0c1830",
+              "primary-container": "#2563eb",
+              "gold": "#F4B942",
+              "gold-light": "#fcd34d",
+              "on-primary": "#ffffff",
+              "on-surface": "#0f1b2d"
+            },
+            "fontFamily": {
+              "sans": ["Tajawal", "Cairo", "sans-serif"],
+              "headline": ["Tajawal", "Cairo", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <style>
+        :root {
+            --primary: #1445a0;
+            --gold: #F4B942;
+        }
+        .dark {
+            --primary: #2563eb;
+            --gold: #F4B942;
+        }
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .section-card {
+            transition: transform 0.2s ease-out;
+        }
+        .section-card:hover {
+            transform: translateY(-2px);
+        }
+        .nav-link {
+            color: #64748b;
+            font-weight: 700;
+            transition: .3s;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        .active-link {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body class="bg-surface dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+<!-- Top Navigation Bar -->
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 left-0 w-full z-50 border-b border-slate-200/80 dark:border-slate-800 shadow-sm">
+  <div class="flex justify-between items-center h-20 px-4 md:px-8 max-w-6xl mx-auto">
+
+    <div class="flex items-center gap-8">
+      <a class="flex items-center gap-4" href="index.html">
+        <img src="logo.jpg" alt="مناسبات الكويت" class="w-14 h-14 md:w-18 md:h-18 rounded-2xl object-cover shadow-lg border-2 border-amber-400/40">
+        <span class="text-xl md:text-2xl font-extrabold text-primary dark:text-blue-400 tracking-tight">
+          مناسبات الكويت
+        </span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-6">
+        <a class="nav-link dark:text-slate-400 dark:hover:text-blue-400" href="index.html">الرئيسية</a>
+        <a class="nav-link active-link dark:text-blue-400" href="terms.html">الشروط والأحكام</a>
+        <a class="nav-link dark:text-slate-400 dark:hover:text-blue-400" href="privacy.html">سياسة الخصوصية</a>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" type="button" class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none rounded-full text-sm p-2.5 transition-colors">
+          <span id="theme-toggle-dark-icon" class="hidden material-symbols-outlined">dark_mode</span>
+          <span id="theme-toggle-light-icon" class="hidden material-symbols-outlined">light_mode</span>
+      </button>
+
+      <a href="index.html#download" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-blue-800 text-white px-5 py-2.5 rounded-full font-bold transition-all duration-300 shadow-lg shadow-blue-900/20 active:scale-95 text-center text-sm">
+        <span class="material-symbols-outlined text-lg">download</span>
+        حمّل التطبيق
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-slate-800 dark:text-slate-100 p-2">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4">
+    <div class="flex flex-col gap-4">
+      <a class="font-bold dark:text-slate-100 hover:text-primary" href="index.html">الرئيسية</a>
+      <a class="font-bold text-primary dark:text-blue-400" href="terms.html">الشروط والأحكام</a>
+      <a class="font-bold dark:text-slate-100 hover:text-primary" href="privacy.html">سياسة الخصوصية</a>
+      <a href="index.html#download" class="bg-primary text-white py-3 rounded-full font-bold text-center mt-2 shadow-md">
+        حمّل التطبيق مجاناً
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[340px] flex items-center justify-center overflow-hidden mb-12 bg-slate-900">
+  <div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover opacity-20" src="imgs/bg.png" alt="Terms Background"/>
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-950/60 via-slate-900/80 to-surface dark:to-slate-950"></div>
+  </div>
+  <div class="relative z-10 text-center px-4 text-white">
+    <div class="inline-flex items-center justify-center p-3 bg-blue-600/20 backdrop-blur-md rounded-full mb-4 border border-white/15">
+      <span class="material-symbols-outlined text-amber-400 text-[42px]" style="font-variation-settings: 'FILL' 1;">gavel</span>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-3">الشروط والأحكام</h1>
+    <p class="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto font-medium">اتفاقية استخدام وتنسيق مناسبات القبائل والعوائل عبر منصة مناسبات الكويت</p>
+    <p class="text-sm text-slate-400 mt-2">تاريخ آخر تحديث: 2026</p>
+  </div>
+</section>
+
+<!-- Content Grid -->
+<div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+    <!-- Sidebar Navigation -->
+    <aside class="lg:col-span-3 hidden lg:block">
+      <div class="sticky top-28 space-y-2 bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm">
+        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 px-2">الأقسام الرئيسية</h3>
+        <a class="flex items-center gap-3 p-3 rounded-xl bg-blue-50 text-primary dark:bg-blue-900/30 dark:text-blue-300 font-bold text-sm" href="#general">
+          <span class="material-symbols-outlined text-lg">description</span>
+          1. شروط الاستخدام العامة
+        </a>
+        <a class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm transition-colors" href="#calendar">
+          <span class="material-symbols-outlined text-lg">calendar_month</span>
+          2. الرزنامة وتنسيق المواعيد
+        </a>
+        <a class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm transition-colors" href="#invitations">
+          <span class="material-symbols-outlined text-lg">mail</span>
+          3. بطاقات الدعوة والمواقع
+        </a>
+        <a class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm transition-colors" href="#services">
+          <span class="material-symbols-outlined text-lg">storefront</span>
+          4. دليل المأذونين والخدمات
+        </a>
+        <a class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm transition-colors" href="#ip">
+          <span class="material-symbols-outlined text-lg">copyright</span>
+          5. الملكية الفكرية
+        </a>
+        <a class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm transition-colors" href="#law">
+          <span class="material-symbols-outlined text-lg">balance</span>
+          6. القانون والاختصاص
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Text Content -->
+    <div class="lg:col-span-9 space-y-8 text-right">
+
+      <!-- Section 1: General Terms -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 md:p-8 shadow-sm" id="general">
+        <div class="flex items-center gap-3 mb-4 text-primary dark:text-blue-400">
+          <span class="material-symbols-outlined text-3xl">description</span>
+          <h2 class="text-2xl font-bold">1. شروط الاستخدام العامة</h2>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+          تعتبر منصة وتطبيق "مناسبات الكويت" بيئة رقمية كويتية مخصصة لتنظيم وتوثيق ومتابعة مناسبات وأفراح القبائل والعوائل الكريمة في دولة الكويت. باستخدامك للتطبيق فإنك تقر وتوافق على الالتزام بكافة الشروط المذكورة هنا:
+        </p>
+        <div class="space-y-4">
+          <div class="section-card bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border-r-4 border-primary">
+            <h3 class="font-bold text-primary dark:text-blue-400 mb-1">صحة وموثوقية البيانات</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">يتعهد المستخدم بتقديم معلومات حقيقية وصحيحة بشأن صاحب المناسبة، تاريخها، القاعة أو الديوان، ورقم الهاتف المخصص للتواصل.</p>
+          </div>
+          <div class="section-card bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border-r-4 border-amber-500">
+            <h3 class="font-bold text-amber-600 dark:text-amber-400 mb-1">مراعاة الآداب العامة والتقاليد الكويتية</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">يحظر تماماً استخدام التطبيق لنشر أي محتوى مسيء، غير لائق، أو مخالف للقيم والتقاليد الاجتماعية الأصيلة أو القوانين السارية بدولة الكويت.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Calendar -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 md:p-8 shadow-sm" id="calendar">
+        <div class="flex items-center gap-3 mb-4 text-primary dark:text-blue-400">
+          <span class="material-symbols-outlined text-3xl">calendar_month</span>
+          <h2 class="text-2xl font-bold">2. الرزنامة الذكية وتنسيق المواعيد</h2>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+          تهدف رزنامة مناسبات الكويت إلى مساعدة الأهالي والقبائل على حجز وتنسيق مواعيد أفراحهم مسبقاً لمنع أي تضارب بين مواعيد العوائل والأقارب في اليوم الواحد:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/50 dark:border-slate-700">
+            <span class="material-symbols-outlined text-primary dark:text-blue-400 mb-2">event_available</span>
+            <h4 class="font-bold mb-1 text-slate-800 dark:text-slate-200">حجز التاريخ في الرزنامة</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">يُسجل التاريخ كإشعار رسمي بالحجز المسبق للمناسبة ضمن سجلات القبيلة أو عموم المناسبات.</p>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/50 dark:border-slate-700">
+            <span class="material-symbols-outlined text-amber-500 mb-2">edit_calendar</span>
+            <h4 class="font-bold mb-1 text-slate-800 dark:text-slate-200">تعديل أو تأجيل الموعد</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">في حال طرأ أي تغيير على موعد المناسبة أو مكانها، يلتزم صاحب المناسبة بتحديث بياناتها فوراً لتنبيه المعازيم والمدعوين.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Invitations & Maps -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 md:p-8 shadow-sm" id="invitations">
+        <div class="flex items-center gap-3 mb-4 text-primary dark:text-blue-400">
+          <span class="material-symbols-outlined text-3xl">mail</span>
+          <h2 class="text-2xl font-bold">3. بطاقات الدعوة وتحديد المواقع</h2>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+          تتيح المنصة نشر بطاقة الدعوة الرسمية وتسهيل وصول الضيوف إلى مكان الحفل:
+        </p>
+        <ul class="space-y-2 list-none pr-0 mb-4">
+          <li class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+            <span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+            <span>يتحمل الداعي كامل المسؤولية القانونية والأدبية عن نص وصور بطاقة الدعوة المرفوعة.</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+            <span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+            <span>الربط مع خرائط Google يهدف لتسهيل التوجيه الجغرافي للديوان أو الصالة بدقة وسرعة.</span>
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+            <span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+            <span>يوافق صاحب الدعوة على إتاحة رقم التواصل المرفق لتمكين الضيوف من الاتصال أو التهنئة.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 4: Services & Officiants -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 md:p-8 shadow-sm" id="services">
+        <div class="flex items-center gap-3 mb-4 text-primary dark:text-blue-400">
+          <span class="material-symbols-outlined text-3xl">storefront</span>
+          <h2 class="text-2xl font-bold">4. دليل المأذونين والخدمات والتجهيزات</h2>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+          يوفر التطبيق دليلاً شاملاً للمأذونين الشرعيين المعتمدين موزعين على كافة محافظات الكويت (العاصمة، حولي، الفروانية، الأحمدي، مبارك الكبير، الجهراء)، بالإضافة لمزودي خدمات الضيافة والتجهيزات (بوفيهات، صبابين قهوة، مصورين):
+        </p>
+        <div class="p-4 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40 rounded-xl space-y-2">
+          <h4 class="font-bold text-amber-700 dark:text-amber-400">إخلاء مسؤولية التعاملات التجارية:</h4>
+          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            تطبيق "مناسبات الكويت" هو منصة وسيطة لعرض الدليل والمعلومات فقط. أي اتفاق مالي، تعاقد تجاري، أو تقديم خدمة يتم بصورة مباشرة بين المستخدم ومزود الخدمة أو المأذون الشرعي، ولا تتحمل المنصة أي مسؤولية مالية أو قانونية تجاه تلك التعاملات.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 5: Intellectual Property -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 md:p-8 shadow-sm" id="ip">
+        <div class="flex items-center gap-3 mb-4 text-primary dark:text-blue-400">
+          <span class="material-symbols-outlined text-3xl">copyright</span>
+          <h2 class="text-2xl font-bold">5. حقوق الملكية الفكرية</h2>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+          جميع حقوق الملكية الفكرية، التصاميم، الشعار، البرمجيات، الواجهات وقواعد البيانات الخاصة بتطبيق "مناسبات الكويت" مملوكة بالكامل للمنصة ومحمية بموجب القوانين الكويتية والاتفاقيات الدولية ذات الصلة.
+        </p>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
+          يُحظر تماماً استنساخ أو إعادة نشر أو استخراج أي جزء من محتوى التطبيق أو بيانات المأذونين والقبائل لأي غرض تجاري دون إذن كتابي مسبق.
+        </p>
+      </div>
+
+      <!-- Section 6: Applicable Law -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 md:p-8 shadow-sm" id="law">
+        <div class="flex items-center gap-3 mb-4 text-primary dark:text-blue-400">
+          <span class="material-symbols-outlined text-3xl">balance</span>
+          <h2 class="text-2xl font-bold">6. القانون الواجب التطبيق والاختصاص القضائي</h2>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+          تخضع هذه الشروط والأحكام وتفسر وفقاً لأحكام القوانين والأنظمة المعمول بها في دولة الكويت. وتختص المحاكم الكويتية بكافة درجاتها بالفصل في أي نزاع قد ينشأ عن تطبيق أو تفسير هذه الشروط.
+        </p>
+        <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/50 dark:border-slate-700 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+          <div class="text-sm text-slate-600 dark:text-slate-400">
+            لأي استفسارات قانونية أو تنظيمية تتعلق بالشروط والأحكام، يرجى مراسلتنا عبر التطبيق.
+          </div>
+          <a href="index.html#download" class="inline-flex items-center justify-center bg-primary text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-blue-800 transition-colors whitespace-nowrap">
+            تحميل التطبيق
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 pt-12 pb-8 border-t border-slate-200/80 dark:border-slate-800 mt-16">
+  <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+      <!-- Brand Column -->
+      <div class="lg:col-span-5 space-y-4">
+        <a class="flex items-center gap-3" href="index.html">
+          <img src="logo.jpg" alt="مناسبات الكويت" class="w-14 h-14 rounded-2xl object-cover shadow-md border-2 border-amber-400/30">
+          <span class="text-2xl font-extrabold text-primary dark:text-blue-400 tracking-tight">مناسبات الكويت</span>
+        </a>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-sm">
+          المنصة الشاملة الأولى في دولة الكويت لتنظيم وتوثيق مناسبات القبائل والعوائل، مع رزنامة ذكية ودليل معتمد للمأذونين والخدمات.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="lg:col-span-3 space-y-3">
+        <h4 class="text-base font-bold text-slate-800 dark:text-slate-100">روابط سريعة</h4>
+        <nav class="flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-400">
+          <a class="hover:text-primary transition-colors" href="index.html">الصفحة الرئيسية</a>
+          <a class="hover:text-primary transition-colors" href="index.html#features">مميزات المنصة</a>
+          <a class="hover:text-primary transition-colors" href="index.html#how">كيف يعمل التطبيق</a>
+          <a class="hover:text-primary transition-colors" href="index.html#download">تحميل التطبيق</a>
+        </nav>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="lg:col-span-4 space-y-3">
+        <h4 class="text-base font-bold text-slate-800 dark:text-slate-100">الشروط والسياسات</h4>
+        <nav class="flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-400">
+          <a class="hover:text-primary transition-colors" href="privacy.html">سياسة الخصوصية</a>
+          <a class="hover:text-primary font-bold text-primary dark:text-blue-400" href="terms.html">الشروط والأحكام</a>
+          <a class="hover:text-primary transition-colors" href="index.html#download">تنزيل التطبيق للآيفون والأندرويد</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-slate-200/70 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <p>© 2026 تطبيق مناسبات الكويت. جميع الحقوق محفوظة.</p>
+      <p>دولة الكويت – منصة تنظيم وتوثيق مناسبات القبائل والعوائل</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple scroll spy behavior for the sidebar
+  window.addEventListener('scroll', () => {
+    const sections = ['general', 'calendar', 'invitations', 'services', 'ip', 'law'];
+    const navLinks = document.querySelectorAll('aside a');
+    let current = "";
+    sections.forEach(section => {
+      const element = document.getElementById(section);
+      if (element) {
+        const sectionTop = element.offsetTop;
+        if (window.pageYOffset >= sectionTop - 140) {
+          current = section;
+        }
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('bg-blue-50', 'text-primary', 'dark:bg-blue-900/30', 'dark:text-blue-300');
+      link.classList.add('text-slate-600', 'dark:text-slate-400');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('bg-blue-50', 'text-primary', 'dark:bg-blue-900/30', 'dark:text-blue-300');
+        link.classList.remove('text-slate-600', 'dark:text-slate-400');
+      }
+    });
+  });
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Theme Toggle Script
+  var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+  var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+  if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    themeToggleLightIcon.classList.remove('hidden');
+  } else {
+    themeToggleDarkIcon.classList.remove('hidden');
+  }
+
+  var themeToggleBtn = document.getElementById('theme-toggle');
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function() {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+
+      if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+        }
+      } else {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+        }
+      }
+    });
+  }
+</script>
+</body>
+</html>
